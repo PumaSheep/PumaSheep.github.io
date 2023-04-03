@@ -29,7 +29,7 @@ function clickYes(){
 
 function meowForever(){
     var meowSound = new Audio('Photos/Meow.wav');
-    mewSound.volume = 0.2;
+    meowSound.volume = 0.2;
     meowSound.playbackRate = Math.random() + 0.5;
     meowSound.play();
     setTimeout(meowForever, Math.floor(Math.random() * 5000) + 1000);
