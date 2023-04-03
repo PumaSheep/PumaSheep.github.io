@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Emma GOTY 2023</title>
+        <meta name="description" content="VOTE EMMA GOTY 2023">
+        <link rel="stylesheet" href="main.css">
+        <script src="functionality.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/party-js@latest/bundle/party.min.js"></script>
+    </head>
+    <body>
+        <div id="congrats" class="modal_background">
+            <div class="modal_content">
+                <img id="chain_left" src="Photos/chain.png">
+                <img id="chain_right" src="Photos/chain.png">
+                <div class="image_hider">
+                    <img id="congratulations_photo" src="Photos/NathanBugging.PNG">
+                    <img id="thumbs_up" src="Photos/thumbs_up.png">
+                </div>
+                <div id="congratulations_message">
+                    <p style="margin: 0px;">That's Great!!!</p>
+                    <p style="font-size: 40px; margin-top: 0px;">Don't forget to vote before the deadline on April Xth!!!</p>
+                </div>
+            </div>
+            <div id="cat_holder">
+                <div class="cat_container" id="cathider1">
+                    <img class="cat" id="cat1" src="Photos/WillyDance.png">
+                </div>
+                <div class="cat_container" id="cathider2">
+                    <img class="cat" id="cat2" src="Photos/WillyDance.png">
+                </div>
+                <div class="cat_container" id="cathider3">
+                    <img class="cat" id="cat3" src="Photos/WillyDance.png">
+                </div>
+                <div class="cat_container" id="cathider4">
+                    <img class="cat" id="cat4" src="Photos/WillyDance.png">
+                </div>
+            </div>
+        </div>
+        <div id="warning" hidden>
+            <div id="warning_wrapper_red"></div>
+            <div id="warning_wrapper_darkred"></div>
+            <div id="warning_text">
+                <div>WARNING: FAKE</div>
+                <div>GAMER DETECTED!!!!!</div>
+            </div>
+        </div>
+        <div id="content">
+            <div id="header">
+                <p class="header_text header_star_1">★</p>
+                <p class="header_text">The World Needs</p>
+                <p class="header_text">A Gamer We Can Trust</p>
+            </div>
+            
+            <img id="portrait" src="Photos/sleepy_xiao.jpg">
+            <div>
+                <em>
+                <p class="portrait_text">In a world of "squeaky clean" city-slickers</p>
+                <p class="portrait_text">choose <span id="dirt">dirt</span> for GOTY 2023</p>
+                </em>
+            </div>
+            <div id="prompt">
+                <p><u>Can we count on your vote?</u></p>
+                <div class="split">
+                    <button id="yes_button" onclick="clickYes()">YES!!!</button>
+                    <button id="no_button" onclick="clickNo()">NO!!!</button>
+                </div>
+            </div>
+        </div>
+        <div id="shooters">
+            <div class="shooter_container" id="hider1">
+                <img class="shooter" id="shooter1" src="Photos/EmmaShootLeft.png">
+            </div>
+            <div class="shooter_container" id="hider2">
+                <img class="shooter" id="shooter2" src="Photos/EmmaShootLeft.png">
+            </div>
+            <div class="shooter_container" id="hider3">
+                <img class="shooter" id="shooter3" src="Photos/EmmaShootRight.png">
+            </div>
+            <div class="shooter_container" id="hider4">
+                <img class="shooter" id="shooter4" src=" Photos/EmmaShootRight.png">
+            </div>
+        </div>
+    </body> 
+</html>
+

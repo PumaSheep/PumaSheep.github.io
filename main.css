@@ -1,0 +1,408 @@
+html {
+    background: #e6e9e9;
+}
+
+body {
+    background: url('Photos/ohio_flag.png') white;
+    background-size: cover;
+    margin: 0px;
+}
+
+#content{
+    width: 60%;
+    height: 1000px;
+    margin: auto;
+    padding: 10px;
+    background-color: white;
+    border-left: 2px solid black;
+    border-right: 2px solid black;
+}
+
+#header{
+    margin: auto;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.header_text{
+    font-size: 80px;
+    margin: 0px;
+    background: linear-gradient(to right, #cc1f00, #d9d9d9, #0066db);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#portrait{
+    display: block;
+    background-color: black;
+    margin: auto;
+    margin-top: 50px;
+    border: 5px solid #0066db;
+    border-radius: 50%;
+    box-shadow:
+        0 0 0 5px white,
+        0 0 0 10px #cc1f00;
+    width: 200px;
+    height: 200px;
+}
+
+.portrait_text{
+    text-align: center;
+    font-size: 40px;
+    margin: 0px;
+    margin-top: 20px;
+}
+
+#dirt{
+    color: saddlebrown;
+}
+
+#prompt{
+    width: 400px;
+    margin: auto;
+    margin-top: 30px;
+    padding: 0px 10px 10px 10px;
+    text-align: center;
+    font-size: 30px;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+.split{
+    display: grid;
+    margin: auto;
+    grid-template-columns: auto auto;
+    column-gap: 10px;
+}
+
+#yes_button{
+    cursor: pointer;
+    background: linear-gradient(to right, #cc1f00, #d9d9d9, #0066db);
+    background-size: 200% 200%;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    transition: all 1s;
+}
+
+#yes_button:hover{
+    background-position: 100% 100%;
+}
+
+.modal_background{
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background-image: url("Photos/Balloons.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    animation-name: modal-bg-in;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes modal-bg-in{
+  from {opacity: 0;}
+  to {opacity: 100;}
+}
+
+@keyframes modal-bg-out{
+  from {opacity: 100;}
+  to {opacity: 0;}
+}
+
+.modal_content{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px;
+    height: 600px;
+    background-color: ghostwhite;
+    border: solid 1px black;
+    border-radius: 10px;
+    box-shadow: 2px 5px 5px black;
+    animation-name: modal-content-in;
+    animation-timing-function: ease-in-out;
+    animation-duration: 5s;
+}
+
+@keyframes modal-content-in{
+    0% {top: 0px;}
+    80% {top: 50%}
+    85% {top: 51%}
+    87% {top: 46%;}
+    90% {top: 51%;}
+    93% {top: 49%;}
+    100% {top: 50%;}
+}
+
+.image_hider{
+    overflow: hidden;
+    margin: auto;
+    margin-top: 50px;
+    width: 346px;
+    height: 329px;
+}
+
+#chain_left{
+    position: absolute;
+    display: inline;
+    top: -320px;
+}
+
+#chain_right{
+    position: absolute;
+    display: inline;
+    top: -320px;
+    left: 346px;
+}
+
+#congratulations_photo{
+    margin: auto;
+    display: block;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+#thumbs_up{
+    position: relative;
+    bottom: 150px;
+    left: 200px;
+    height: 200px;
+    animation-name: thumb-in;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes thumb-in{
+    0% {bottom: 0px;}
+    50% {bottom: 150px;}
+    100% {bottom: 0px;}
+}
+
+#congratulations_message{
+    text-align: center;
+    width: 100%;
+    margin-top: 20px;
+    font-size: 50px;
+    background: linear-gradient(to right, #ef5350, #f48fb1, #7e57c2, #2196f3, #26c6da, #43a047, #eeff41, #f9a825, #ff5722);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#cat_holder{
+    margin: auto;
+    position: fixed;
+    width: 100%;
+    height: 500px;
+    bottom: 0px;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+}
+
+.cat_container{
+    width: 150px;
+    margin: auto;
+}
+
+.cat{
+    margin: auto;
+    position: absolute;
+    bottom: 0px;
+    height: 300px;
+    transition: all 1s;
+}
+
+.cat.dancing{
+    animation-name: cat_dance_bob, cat_dance_lr;
+    animation-timing-function: ease-in-out;
+    animation-duration: 1s, 5.24s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes cat_dance_bob{
+    0% {bottom: -50px;}
+    50% {bottom: 0px;}
+    100% {bottom: -50px;}
+}
+
+@keyframes cat_dance_lr{
+    0% {transform: translate(0px, 0px) rotateY(0deg);}
+    25% {transform: translate(100px, 0px) rotateY(0deg);}
+    30% {transform: translate(100px, 0px) rotateY(180deg);}
+    75% {transform: translate(-100px, 0px) rotateY(180deg);}
+    80% {transform: translate(-100px, 0px) rotateY(0deg);}
+    100% {transform: translate(0px, 0px) rotateY(0deg);}
+}
+
+#no_button{
+    cursor: pointer;
+    
+    background-size: cover;
+    background-position: 0% 50%;
+    background-color: rgba(40,40,40,0.5);
+    border: none;
+    border-radius: 10px;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    transition: all 1s;
+}
+
+#no_button:hover{
+    background-image: url(Photos/frown.png);
+}
+
+@keyframes warningflash{
+    0% {background-color: darkred;}
+    50%{background-color: red;}
+    100% {background-color: darkred;}
+}
+
+@keyframes warningwrapperflash{
+    0% {opacity: 100%}
+    50%{opacity: 0%;}
+    100% {opacity: 100%;}
+}
+
+@keyframes warningtextflash{
+    0% {color: darkred;}
+    50%{color: red;}
+    100% {color: darkred;}
+}
+
+#warning{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background-color: darkred;
+    text-align: center;
+    opacity: 0%;
+    transition: all 1s;
+    animation-name: warningflash;
+    animation-duration: 1.25s;
+    animation-iteration-count: infinite;
+}
+
+#warning.show_warning{
+    opacity: 100%;
+}
+
+#warning_wrapper_red{
+    position: fixed;
+    padding: 50px;
+    height: 378px;
+    width: 100%;
+    top: 200px;
+    left: 0px;
+    background: repeating-linear-gradient(
+      45deg,
+      red,
+      red 10px,
+      black 10px,
+      black 20px
+    );
+}
+
+#warning_wrapper_darkred{
+    position: fixed;
+    padding: 50px;
+    height: 378px;
+    width: 100%;
+    top: 200px;
+    left: 0px;
+    background: repeating-linear-gradient(
+      45deg,
+      darkred,
+      darkred 10px,
+      black 10px,
+      black 20px
+    );
+    animation-name: warningwrapperflash;
+    animation-duration: 1.25s;
+    animation-iteration-count: infinite;
+}
+
+#warning_text{
+    position: fixed;
+    top: 250px;
+    left: 0px;
+    width: 100%;
+    height: 278px;
+    margin: auto;
+    overflow: hidden;
+    white-space: nowrap;
+    padding: 50px;
+    font-size: 120px;
+    font-weight: bold;
+    color: darkred;
+    background-color: black;
+    border: 1px solid black;
+    animation-name: warningtextflash;
+    animation-duration: 1.25s;
+    animation-iteration-count: infinite;
+}
+
+#shooters{
+    margin: auto;
+    position: fixed;
+    width: 100%;
+    height: 500px;
+    bottom: 0px;
+    display: none;
+    grid-template-columns: auto auto auto auto;
+}
+
+.shooter_container{
+    width: 346px;
+    margin: auto;
+}
+
+.shooter.raise_shooters{
+    bottom: -500px;
+}
+
+.shooter.raised_shooter{
+    animation-name: shootingAnimation;
+    animation-duration: 0.05s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes shootingAnimation{
+    0% {transform: translate(1px, 1px);}
+    50%{transform: translate(-1px, -1px);}
+    100% {transform: translate(0px, 0px);}
+}
+
+.shooter{
+    position: absolute;
+    bottom: -1141px;
+    margin: auto;
+    transition: all 1s;
+}
+
+@keyframes gunshotFade{
+    0% {opacity: 100%;}
+    90% {opacity: 100%;}
+    100% {opacity: 0%;}
+}
+
+.gunshot{
+    width: 150px;
+    height: 150px;
+    animation-name: gunshotFade;
+    animation-duration: 4s;
+    animation-fill-mode: forwards;
+}
+
