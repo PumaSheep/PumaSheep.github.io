@@ -8,11 +8,16 @@ function clickYes(){
     setTimeout(()=> {document.getElementById("cat3").classList.add('dancing');}, 1000);
     setTimeout(()=> {document.getElementById("cat4").classList.add('dancing');}, 1500);
     var screech = new Audio('Photos/Screech.mp3');
+    screech.volume = 0.1;
     screech.play();
     setTimeout(()=>{
-        new Audio('Photos/Clap.mp3').play();
+        var clap = new Audio('Photos/Clap.mp3');
+        clap.volume = 0.5;
+        clap.play();
         setTimeout(()=>{
-            new Audio('Photos/Yipee.mp3').play();
+            var yipee = new Audio('Photos/Yipee.mp3')
+            yipee.volume = 0.5;
+            yipee.play();
             screech.pause();
             setTimeout(meowForever, 3000);
         }, 1000);
@@ -24,6 +29,7 @@ function clickYes(){
 
 function meowForever(){
     var meowSound = new Audio('Photos/Meow.wav');
+    mewSound.volume = 0.2;
     meowSound.playbackRate = Math.random() + 0.5;
     meowSound.play();
     setTimeout(meowForever, Math.floor(Math.random() * 5000) + 1000);
@@ -35,6 +41,7 @@ function clickNo(){
     document.getElementById("warning").hidden = false;
     document.getElementById("warning").classList.add('show_warning');
     let alarmSound = new Audio('Photos/Alarm.mp3');
+    alarmSound.volume = 0.3;
     alarmSound.play();
     var trackGunshots = [];
     setTimeout(()=>{
@@ -63,6 +70,7 @@ function clickNo(){
                     document.body.appendChild(newGlassBreak);
                     trackGunshots.push(newGlassBreak); //Track to remove later
                     let gunshotSound = new Audio('Photos/Gunshot.mp3');
+                    gunshotSound.volume = 0.2;
                     gunshotSound.play()
                 }, i * 100);
             }
